@@ -18,7 +18,7 @@ const nextConfig = async () => {
     // locales,
     // defaultLocale: locales[0],
     reactStrictMode: true,
-    swcMinify: true,
+    swcMinify: false,
     compiler: {
       removeConsole: true,
       styledComponents: true,
