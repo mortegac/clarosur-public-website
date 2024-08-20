@@ -6,7 +6,7 @@ export const ItemsContainer = ({ items }) => {
   const cards = items;
   return (
     <ItemsWrapper>
-      {console.log('---items---', items)}
+      {/* {console.log('---items---', items)} */}
       {cards.map((card, i) => (
         <Item key={i} >
           <Header>
