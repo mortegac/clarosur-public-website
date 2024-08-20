@@ -1,0 +1,36 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "imgswapp": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613"
+      },
+      "subtitle": "on",
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Commodo pariatur labore elit occaecat reprehenderit sunt aliquip aliquip incididunt consequat ut qui nostrud incididunt in.",
+          "spans": []
+        }
+      ],
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Taught",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "projects"
+  }
+]

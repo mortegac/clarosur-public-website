@@ -1,0 +1,42 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "contenttext": "rising",
+        "subtitle": "basis"
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Given",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "metrics"
+  },
+  {
+    "variation": "noBackground",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "contenttext": "tongue",
+        "subtitle": "unusual"
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Least",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "metrics"
+  }
+]

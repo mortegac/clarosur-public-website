@@ -1,0 +1,83 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "subtittle": [
+        {
+          "type": "paragraph",
+          "text": "Non qui id consequat adipisicing.",
+          "spans": []
+        }
+      ],
+      "tittle": [
+        {
+          "type": "paragraph",
+          "text": "Quis proident esse esse dolore et elit qui incididunt magna. Sint et occaecat nostrud fugiat fugiat exercitation excepteur non non excepteur quis ipsum.",
+          "spans": []
+        }
+      ],
+      "buttontext": "piano",
+      "buttonlink": {
+        "link_type": "Web",
+        "url": "http://twitter.com"
+      },
+      "bgcolorInitial": "#117523",
+      "bgcolorend": "#ae7905"
+    },
+    "slice_type": "ideas"
+  },
+  {
+    "variation": "noButtonNobg",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "subtittle": [
+        {
+          "type": "paragraph",
+          "text": "Enim cupidatat Lorem excepteur non veniam ipsum occaecat commodo ea laborum mollit velit cupidatat fugiat anim. Officia minim mollit laborum ipsum consequat amet.",
+          "spans": []
+        }
+      ],
+      "tittle": [
+        {
+          "type": "paragraph",
+          "text": "Sint officia duis enim do sint amet officia consequat consequat ex velit aliqua. Exercitation incididunt non ullamco veniam aute dolore cillum nostrud ipsum ea proident culpa culpa. Nostrud aliquip consectetur duis velit.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "ideas"
+  },
+  {
+    "variation": "noButton",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "subtittle": [
+        {
+          "type": "paragraph",
+          "text": "Sit sit nisi enim aute quis laboris cupidatat pariatur mollit exercitation.",
+          "spans": []
+        }
+      ],
+      "tittle": [
+        {
+          "type": "paragraph",
+          "text": "Do nisi enim laboris duis. Id proident aute sit exercitation eiusmod aliqua sint amet nisi. Incididunt do laborum cillum duis nulla anim officia qui anim.",
+          "spans": []
+        }
+      ],
+      "bgcolorInitial": "#8dcdd2",
+      "bgcolorend": "#41743e"
+    },
+    "slice_type": "ideas"
+  }
+]

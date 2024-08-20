@@ -1,0 +1,48 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Carried",
+          "spans": []
+        }
+      ],
+      "subtitle": [
+        {
+          "type": "heading2",
+          "text": "Carry",
+          "spans": []
+        }
+      ],
+      "name": "machinery",
+      "email": "search",
+      "message": "possibly"
+    },
+    "slice_type": "contact"
+  },
+  {
+    "variation": "cotizarForm",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "subtitle": [
+        {
+          "type": "heading2",
+          "text": "Extra",
+          "spans": []
+        }
+      ],
+      "name": "lips",
+      "email": "journey"
+    },
+    "slice_type": "contact"
+  }
+]

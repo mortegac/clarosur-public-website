@@ -1,0 +1,141 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "imagelist": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c"
+        },
+        "titlelist": "form",
+        "descriptionlist": "tightly"
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Noted",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Sint eiusmod id aute sunt labore eiusmod. Mollit eiusmod mollit tempor nisi aliquip laboris veniam tempor laborum voluptate eu ullamco reprehenderit dolore proident. Nulla do ullamco reprehenderit.",
+          "spans": []
+        }
+      ],
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"
+      },
+      "buttontext": "driven"
+    },
+    "slice_type": "services"
+  },
+  {
+    "variation": "noIconsNoButtons",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Spider",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Tempor excepteur incididunt cupidatat esse cupidatat deserunt veniam tempor qui consectetur magna anim cupidatat occaecat. Labore do incididunt dolor nulla labore ut. Nulla esse officia anim et do quis nostrud et laboris velit sit reprehenderit.",
+          "spans": []
+        }
+      ],
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f"
+      }
+    },
+    "slice_type": "services"
+  },
+  {
+    "variation": "noIcons",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Depth",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Lorem eiusmod consequat labore aliquip qui est sunt. Laborum magna magna ipsum proident Lorem incididunt ea consequat ea nostrud labore. Aliqua sint excepteur pariatur pariatur laborum sint nulla ut fugiat.",
+          "spans": []
+        }
+      ],
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
+      },
+      "buttontext": "unless"
+    },
+    "slice_type": "services"
+  },
+  {
+    "variation": "imageText",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Voyage",
+          "spans": []
+        }
+      ],
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da"
+      }
+    },
+    "slice_type": "services"
+  }
+]

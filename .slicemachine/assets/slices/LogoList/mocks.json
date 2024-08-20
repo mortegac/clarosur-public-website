@@ -1,0 +1,95 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "logoImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5"
+        }
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Handsome",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Excepteur sit consectetur dolor. Ut ullamco pariatur commodo non laborum. Ex aliqua voluptate ullamco commodo non do aliqua elit laboris nisi tempor aliquip consectetur ea.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "logo_list"
+  },
+  {
+    "variation": "onlyLogosBg",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "logoImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
+        }
+      }
+    ],
+    "primary": {},
+    "slice_type": "logo_list"
+  },
+  {
+    "variation": "buttonTitleDescription",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "logoImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a"
+        },
+        "subtitle": [
+          {
+            "type": "paragraph",
+            "text": "Esse ut voluptate nisi sint eiusmod excepteur. Ad eu adipisicing ea dolore qui amet labore enim in dolore officia id do et consequat.",
+            "spans": []
+          }
+        ],
+        "description": "apartment",
+        "buttonlink": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "buttontext": "particles"
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Et mollit sint duis sunt labore nisi. Ex fugiat aute nostrud minim est eu sint. Mollit Lorem sit nostrud aliqua cupidatat ut sint.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "logo_list"
+  }
+]
