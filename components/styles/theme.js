@@ -146,8 +146,8 @@ export const Theme = {
     borderRadius: "22px",
     height: "46px",
     padding: "12px 30px",
-    bgPrimary: "#3FBB49",
-    bgPrimaryOver: "#49DE55",
+    bgPrimary: "#0066CC",
+    bgPrimaryOver: "#087df3",
   },
   breakpoints: {
     xs: "450px",

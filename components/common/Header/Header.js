@@ -30,7 +30,7 @@ export const Header = ({
 
   const menuLinks = header?.data?.menulinks || [];
   const calltoactiontext = header?.data?.calltoactiontext || [];
-  const calltoactionUri = header?.data?.calltoactionurl.url || {};
+  const calltoactionUri = header?.data?.calltoactionurl.uid || {};
 
   return (
     <NavContainer>
@@ -38,7 +38,7 @@ export const Header = ({
         <LinkLogo />
         <LeftWrap>
           <ul>{renderedMenuLinks(menuLinks, pagename)}</ul>
-          <Anchor id={calltoactionUri} href={calltoactionUri} target="_blank">
+          <Anchor id={calltoactionUri} href={calltoactionUri} >
             <ButtonContainer fullwidth={true}>
               {calltoactiontext[0]?.text || "Contact"}
             </ButtonContainer>

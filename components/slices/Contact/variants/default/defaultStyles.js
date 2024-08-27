@@ -44,7 +44,7 @@ export const SectionContainer = styled.div`
 `;
 
 export const FormContainer = styled.form`
-  max-width: 440px;
+  max-width: 540px;
   width: 100%;
   background: white;
   border: 1px solid rgba(0, 17, 51, 0.15);
