@@ -17,6 +17,9 @@ export const navMenuItems = {
 
 export const Anchor = styled.a`
   margin: 0;
+  display: flex;
+  justify-content: center;
+  
   &.fullwidth {
     @media (max-width: 768px) {
       width: 100%;
@@ -54,7 +57,7 @@ export const ButtonContainer = styled.button`
   padding:${(props) => props.theme.button.padding};
   
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    width: 100%;
+    width: 80%;
   }
 `;
 
@@ -259,7 +262,7 @@ export const MobileNavContainer = styled.div`
   right: 0;
   background: transparent;
   // background: rgb(250, 250, 251);
-  // background: ${(props) => props.theme.colors.secondary};
+  background: ${(props) => props.theme.colors.secondary};
   transform: translateX(100%);
   transition: transform 0.3s ease;
 

@@ -53,7 +53,7 @@ export const getMetaTags = ({ description, author, title }) => [
     },
     {
         name: `og:image`,
-        content: "https://images.prismic.io/clarosur/ac375b05-4a63-492c-87ad-b65f2bb080f4_SOCIAL-MEDIA.png",
+        content: "https://images.prismic.io/clarosur/Ztoxerzzk9ZrXEaC_SEO-clarosur.png",
     },
     {
         name: `og:image:alt`,
@@ -69,7 +69,7 @@ export const getMetaTags = ({ description, author, title }) => [
     },
     {
         name: `og:site_name`,
-        content: "clarosur-city",
+        content: "clarosur",
     },
     {
         name: `viewport`,
@@ -77,7 +77,7 @@ export const getMetaTags = ({ description, author, title }) => [
     },
     {
         name: `keywords`,
-        content: "Transforma tu flota hacia un futuro sostenible con nuestras asesorías en proyectos de electromovilidad. Descubre cómo recambiar tus vehículos de gasolina o bencina por opciones eléctricas eficientes y amigables con el medio ambiente. Nuestro equipo de expertos te guiará en cada paso del proceso, desde la evaluación inicial hasta la implementación exitosa. ¡Conviértete en líder de la revolución eléctrica y optimiza tus recursos hoy mismo!",
+        content: "",
     },
 ].map((items, i) => (
     <meta key={`meta-${i}`} {...items}></meta>

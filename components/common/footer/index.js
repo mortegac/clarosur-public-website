@@ -13,9 +13,16 @@ const FooterWrapper = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 48px 24px;
+  padding: 64px 24px;
+  min-height: 250px;
+  // padding: 48px 24px;
   background-color: ${props =>
     props.backgroundColor ? props.backgroundColor : "white"};
+  
+  @media (max-width: 760px) {
+    padding:0px;
+    padding-top:48px;
+  }
 `;
 
 const FooterItemsContainer = styled.div`
@@ -27,6 +34,8 @@ const FooterItemsContainer = styled.div`
   justify-content: flex-start;
   @media (max-width: 760px) {
     flex-direction: column;
+    margin:0px;
+    padding:0px;
   }
 `;
 
@@ -38,7 +47,7 @@ const Footer = ({
     <FooterWrapper backgroundColor={"#0B3954"}>
       <FooterItemsContainer>
         <FooterCopyright copyrightText="CLAROSUR © 2023 , Inc. Todos los derechos reservados." />
-        <FooterList title={"clarosur"} items={items} />
+        <FooterList title={""} items={items} />
         <SocialLinks socialTitle={" "} />
       </FooterItemsContainer>
     </FooterWrapper>
@@ -57,7 +66,7 @@ Footer.propTypes = {
 Footer.defaultProps = {
   // logo: "/logo.svg",
   // copyrightText:
-  //   "clarosur © 2023 , Inc. Todos los derechos reservados.",
+  //   "m-elevadores © 2023 , Inc. Todos los derechos reservados.",
   // backgroundColor: "gray",
   // columnTitle: "Electro Move",
   // socialTitle: "Follow us",

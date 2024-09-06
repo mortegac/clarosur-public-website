@@ -14,7 +14,7 @@ export const ItemsWrapper = styled.div`
 `;
 
 export const Box = styled.div`
-padding: 20px 30px;
+// padding: 20px 30px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -25,7 +25,7 @@ export const Item = styled.div`
   background-color: white;
   width: 30%;
   // max-width: "";
-  padding: 24px;
+  // padding: 24px;
   padding-top: 0;
   margin-right:16px;
   min-height: 320px;
@@ -36,7 +36,7 @@ export const Item = styled.div`
   align-items: center;
   justify-content: space-between;
   // border: "";
-  text-align: center;
+  text-align: left;
   
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {

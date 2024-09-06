@@ -67,8 +67,13 @@ export const Header = ({
                 <LinkLogo />
               </div>
               <ul>{renderedMenuLinks(menuLinks, pagename)}</ul>
-              <Anchor id={calltoactionUri} href={calltoactionUri} target="_blank">
+              {/* <Anchor id={calltoactionUri} href={calltoactionUri} target="_blank">
                 <ButtonContainer fullwidth={true}>
+                  {calltoactiontext[0]?.text || "Contact"}
+                </ButtonContainer>
+              </Anchor> */}
+               <Anchor id={calltoactionUri} href={calltoactionUri} >
+                <ButtonContainer fullwidth={false}>
                   {calltoactiontext[0]?.text || "Contact"}
                 </ButtonContainer>
               </Anchor>

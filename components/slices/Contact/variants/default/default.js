@@ -7,18 +7,17 @@ import { SliceFactory } from "../../../../common/Containers";
 import { PageContainer, ButtonContainer, SectionContainer, FormContainer } from "../default/defaultStyles";
 import { RichText } from "prismic-reactjs";
 
-const SERVICE = "service_56ebg58";
-const TEMPLATE = "template_6p752sc";
-init("lUerPXXiKXnrvLlVw");
-// init("PIMyrgWnw02fMs0zj");
+const SERVICE = "service_yy76iay";
+const TEMPLATE = "template_tjnet8s";
+init("kDFbozqH1THWp3UdO");  // Public Key
 
 const Base = slice => {
   const { title, subtitle, email, message, name } = slice.primary;
   const [isSentEmail, setIsSentEmail] = useState({
     sentEmail: false,
     isFailure: false,
-    title: "Page not found 😭",
-    text: "We can't seem to find the page you're looking for ",
+    title: "Página no encontrada 😭",
+    text: "Parece que no podemos encontrar la página que estás buscando",
   });
   const [emailValue, setEmailValue] = useState("");
 
@@ -61,8 +60,8 @@ const Base = slice => {
         setIsSentEmail({
           sentEmail: true,
           isFailure: true,
-          title: "Page not found 😭",
-          text: "Parece que no podemos encontrar la página que estás buscando.",
+          title: "Página no encontrada 😭",
+          text: "Parece que no podemos encontrar la página que estás buscando",
           response: response || '',
         });
         console.log("FAILED...", error);
@@ -70,8 +69,8 @@ const Base = slice => {
     ).catch(err => setIsSentEmail({
       sentEmail: true,
       isFailure: true,
-      title: "Page not found 😭",
-      text: "Parece que no podemos encontrar la página que estás buscando.",
+      title: "Página no encontrada 😭",
+      text: "Parece que no podemos encontrar la página que estás buscando",
       response: response || '',
     })
     );
@@ -105,7 +104,7 @@ const Base = slice => {
               prefetch
             >
               <ButtonContainer fullwidth={true}>
-                {"Take me home"}
+                {"Ir al Inicio"}
               </ButtonContainer>
             </Link>
           </SectionContainer>
@@ -119,9 +118,9 @@ const Base = slice => {
 
           <FormContainer noValidate onSubmit={handleSubmit(onSubmit)}>
 
-            <h2>{title[0].text || "Contactanos"}</h2>
+            <h2>{title[0]?.text && title[0]?.text || "Contactanos"}</h2>
             <p>
-              {subtitle[0].text ||
+              {subtitle[0]?.text && subtitle[0]?.text ||
                 "Cuéntenos sobre usted y lo conectaremos con nuestros expertos para responder cualquier pregunta que tenga."}
             </p>
 

@@ -1,9 +1,9 @@
 import { SliceFactory } from "../../../../common/Containers";
-import { Description, Content, ImgHolder, Button } from "../default/defaultStyles";
+import { Description, Content, ImgHolder, Anchor, ButtonContainer } from "../default/defaultStyles";
 import { RichText } from "prismic-reactjs";
 
 const Base = (props) => {
-  const { description, image, title, mobileimage, buttontext } = props.primary;
+  const { description, image, title, mobileimage, buttontext, buttonlink } = props.primary;
 
   // window.console.log('--slice--', slice)
 
@@ -14,9 +14,14 @@ const Base = (props) => {
         {description[0]?.text && (
           RichText.render(description)
         )}
-        <Button>
-          {buttontext ? buttontext : `Let's Talk`}
-        </Button>
+         { buttontext && buttonlink && 
+          <Anchor id={buttonlink?.uid} href={buttonlink?.uid} >
+              <ButtonContainer fullwidth={true}>
+                {buttontext || "Cotiza"}
+              </ButtonContainer>
+          </Anchor>
+        }
+        
       </Description>
 
       {/* <ImgHolder>

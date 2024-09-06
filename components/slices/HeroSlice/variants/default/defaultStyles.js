@@ -1,5 +1,53 @@
 import styled from "styled-components";
 
+export const Anchor = styled.a`
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  margin-top: 20px;
+  &.fullwidth {
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+  text-decoration: none;
+`;
+export const ButtonContainer = styled.button`
+
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-family: ${(props) => props.theme.typography.fontFamily};
+  white-space: nowrap;
+  border-radius: ${(props) => props.theme.button.borderRadius};
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  height: ${(props) => props.theme.button.height};
+  
+  background:${(props) => props.theme.colors.bgColorTertiary};
+  
+  color:${(props) => props.theme.colors.white};
+  
+  :hover {
+    background: #e4e1e1;
+    color:${(props) => props.theme.colors.grey};
+  }
+  padding:${(props) => props.theme.button.padding};
+  
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    width: 100%;
+  }
+`;
+
 export const Content = styled.div`
   width: 100%;
   display: flex;

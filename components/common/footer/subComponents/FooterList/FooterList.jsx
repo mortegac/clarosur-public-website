@@ -9,7 +9,7 @@ const FooterList = ({ title = "", items = [], socialLinks }) => {
 	return (
 		<FooterListContainer>
 			<h3>{title}</h3>
-			<ul>
+			<ul >
 				{linkgroup.map((item, id) => (
 					<li key={id}>
 						{item?.link?.slug &&
