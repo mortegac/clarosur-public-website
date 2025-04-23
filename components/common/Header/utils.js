@@ -13,19 +13,22 @@ const LinkPage = (data, pagename, setOpen) => {
     };
     return (
         <>
-            <Link
-                key={`top-nav-${data.id}`}
-                href={data.url === "" ? `/${linkResolver(dataMenu)}` : data.uid}
-                passHref
-                prefetch
-            >
-                <a id={data.id} className={data.uid === pagename ? "selected" : ""} onClick={() => setOpen && setOpen(false)}>
-                    <motion.li className="nav-item" animate>
-                        {data.text}
-                        <div className="underline"></div>
-                    </motion.li>
-                </a>
-            </Link>
+            <div onClick={setOpen}>
+                <Link
+                    key={`top-nav-${data.id}`}
+                    href={data.url === "" ? `/${linkResolver(dataMenu)}` : data.uid}
+                    passHref
+                    prefetch
+                >
+                    <a id={data.id} className={data.uid === pagename ? "selected" : ""}>
+                    {/* <a id={data.id} className={data.uid === pagename ? "selected" : ""} onClick={() => setOpen && setOpen()}> */}
+                        <motion.li className="nav-item" animate>
+                            {data.text}
+                            <div className="underline"></div>
+                        </motion.li>
+                    </a>
+                </Link>
+            </div>
         </>
     );
 };

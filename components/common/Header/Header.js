@@ -37,7 +37,7 @@ export const Header = ({
       <SectionContainer>
         <LinkLogo />
         <LeftWrap>
-          <ul>{renderedMenuLinks(menuLinks, pagename, setOpen)}</ul>
+          <ul>{renderedMenuLinks(menuLinks, pagename, HamburgerBehavior)}</ul>
           <Anchor id={calltoactionUri} href={calltoactionUri} >
             <ButtonContainer fullwidth={true}>
               {calltoactiontext[0]?.text || "Contact"}
