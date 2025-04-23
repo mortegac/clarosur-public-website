@@ -4,6 +4,12 @@
 
 <!-- 👉 URL-DEV [https://five06tek-website.onrender.com](https://five06tek-website.onrender.com) -->
 
+Para enviar commit a vercel
+```
+git commit --author="Manuel Ortega <mortega@apgca.cl>" -m "tu mensaje de commit"
+```
+
+
 🤓 Developing ...
 
 ```bash
