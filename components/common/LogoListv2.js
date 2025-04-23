@@ -9,12 +9,20 @@ const LogoListv2 = props => {
       {Array.isArray(list)
         ? list.map((box, index) => {
           return index <= 5 ? (
+            <Link
+              href={`/servicios`}
+              passHref
+            >
+              <a>
+              
+      
+      
             <li
               className="item"
               key={`box-item-${index}`}
             // style={{ backgroundColor: "black" }}
             >
-              {console.log('>>>list  ', box)}
+              {/* {console.log('>>>list  ', box)} */}
               <img src={box?.logoImage?.url || "-"} alt="" />
               <h4>
                 {box.subtitle[0]?.text ? box.subtitle[0].text
@@ -42,6 +50,8 @@ const LogoListv2 = props => {
                 </Button>
               </Link>
             </li>
+            </a>
+            </Link>
           ) : null;
         })
         : null}

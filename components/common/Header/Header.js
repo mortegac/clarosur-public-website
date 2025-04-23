@@ -37,7 +37,7 @@ export const Header = ({
       <SectionContainer>
         <LinkLogo />
         <LeftWrap>
-          <ul>{renderedMenuLinks(menuLinks, pagename)}</ul>
+          <ul>{renderedMenuLinks(menuLinks, pagename, setOpen)}</ul>
           <Anchor id={calltoactionUri} href={calltoactionUri} >
             <ButtonContainer fullwidth={true}>
               {calltoactiontext[0]?.text || "Contact"}
@@ -66,7 +66,7 @@ export const Header = ({
               <div style={{ padding: "10px 10px" }}>
                 <LinkLogo />
               </div>
-              <ul>{renderedMenuLinks(menuLinks, pagename)}</ul>
+              <ul>{renderedMenuLinks(menuLinks, pagename, setOpen)}</ul>
               {/* <Anchor id={calltoactionUri} href={calltoactionUri} target="_blank">
                 <ButtonContainer fullwidth={true}>
                   {calltoactiontext[0]?.text || "Contact"}
