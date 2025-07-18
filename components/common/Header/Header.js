@@ -65,7 +65,6 @@ export const Header = ({
             <>
               <div style={{ padding: "10px 10px" }}>
                 <LinkLogo />
-            <pre style={{color:"#000000"}}>open = {JSON.stringify(open, null, 2)}</pre>
               </div>
               <ul>{renderedMenuLinks(menuLinks, pagename, HamburgerBehavior)}</ul>
               {/* <Anchor id={calltoactionUri} href={calltoactionUri} target="_blank">
