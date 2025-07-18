@@ -9,9 +9,14 @@ export const Content = styled.div`
   h2 {
     text-align: center;
   }
-  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    flex-direction: column;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
-  }
+
+  // @media (max-width: ${(props) => props.theme.breakpoints.lg}) 
+  //   margin-top: 200px;
+  // }
+  // @media (max-width: ${(props) => props.theme.breakpoints.md}) 
+  //   margin-top: 64px;
+  // }
+  // @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+  // margin-top: 64px;
+  // }
 `;

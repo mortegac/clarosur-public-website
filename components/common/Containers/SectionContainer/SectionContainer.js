@@ -3,14 +3,15 @@ import Image from "next/image";
 import {
   SectionContainerBase,
   SectionBackgroundImage,
+  SectionContentWrapper,
 } from "./SectionContainerStyles";
 
 // const SectionContainer = ({ children, bgImage, ...rest }) => {
 const SectionContainer = ({ children, bgImage, bgImageSrc, bgImageUrl, base, ...rest }) => {
   return (
-    <SectionContainerBase {...rest}>
-      {bgImage && (
-        <SectionBackgroundImage image={bgImageSrc}>
+    <SectionContainerBase {...rest} bgImage={bgImage}>
+      {bgImage && bgImageSrc && (
+        <SectionBackgroundImage bgImageSrc={bgImageSrc}>
           {/* <Image
             src={bgImageSrc}
             alt="background image"
@@ -20,7 +21,9 @@ const SectionContainer = ({ children, bgImage, bgImageSrc, bgImageUrl, base, ...
           /> */}
         </SectionBackgroundImage>
       )}
-      {children}
+      <SectionContentWrapper bgImage={bgImage}>
+        {children}
+      </SectionContentWrapper>
     </SectionContainerBase>
   );
 };

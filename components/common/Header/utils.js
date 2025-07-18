@@ -2,7 +2,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { linkResolver } from "../../../prismicio";
-const LinkPage = (data, pagename, setOpen) => {
+const LinkPage = (data, pagename, HamburgerBehavior) => {
     const dataMenu = {
         _meta: {
             type: data.type,
@@ -13,15 +13,15 @@ const LinkPage = (data, pagename, setOpen) => {
     };
     return (
         <>
-            <div onClick={setOpen}>
+            <div onClick={HamburgerBehavior}>
                 <Link
                     key={`top-nav-${data.id}`}
                     href={data.url === "" ? `/${linkResolver(dataMenu)}` : data.uid}
                     passHref
                     prefetch
                 >
-                    <a id={data.id} className={data.uid === pagename ? "selected" : ""}>
-                    {/* <a id={data.id} className={data.uid === pagename ? "selected" : ""} onClick={() => setOpen && setOpen()}> */}
+                    <a id={data.id} className={data.uid === pagename ? "selected" : ""} onClick={()=>HamburgerBehavior()}>
+                    {/* <a id={data.id} className={data.uid === pagename ? "selected" : ""} onClick={() => HamburgerBehavior && setOpen()}> */}
                         <motion.li className="nav-item" animate>
                             {data.text}
                             <div className="underline"></div>
@@ -68,7 +68,7 @@ const validNavbarLink = menuLink => {
     }
 };
 
-export const renderedMenuLinks = (menuLinks, pageName, setOpen) => Array.isArray(menuLinks)
+export const renderedMenuLinks = (menuLinks, pageName, HamburgerBehavior) => Array.isArray(menuLinks)
     ? menuLinks.map((menuLink, index) => {
         const { label, link } = menuLink;
         if (validNavbarLink(menuLink)) {
@@ -84,7 +84,7 @@ export const renderedMenuLinks = (menuLinks, pageName, setOpen) => Array.isArray
                         id={link?.id || "#"}
                         slug={link?.slug || "#"}
                         url={link?.url || ""}
-                        setOpen={setOpen}
+                        HamburgerBehavior={HamburgerBehavior}
                     />
                 </>
             );

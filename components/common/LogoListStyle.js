@@ -35,10 +35,16 @@ export const ItemsContainer = styled.ul`
       padding-bottom: 0;
     }
     img {
-      // max-width: 80px;
-      // max-height: 80px;
-      height: 40px;
-      margin-bottom: 28px;
+      max-width: 80px;
+      max-height: 80px;
+      @media (max-width: 768px) {
+        max-width: 60px;
+        max-height: 60px;
+      }
+      @media (max-width: 500px) {
+        max-width: 70px;
+        max-height: 70px;
+      }
       @media (max-width: 460px) {
         padding: 0;
       }
@@ -124,7 +130,6 @@ export const ItemsContainer = styled.ul`
 export const ItemsContainerv2 = styled.ul`
   margin: 0;
   padding: 0;
-  margin-top: 42px;
   list-style-type: none;
   overflow: hidden;
   display: flex;
@@ -134,10 +139,15 @@ export const ItemsContainerv2 = styled.ul`
   width: 100%;
   @media (max-width: 768px) {
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 0px;
+    gap: 20px;
   }
   @media (max-width: 500px) {
     flex-direction: column;
+    align-items: center;
+    gap: 0px;
   }
 
   .item {
@@ -148,18 +158,27 @@ export const ItemsContainerv2 = styled.ul`
     align-items: center;
     @media (max-width: 768px) {
       padding-bottom: 48px;
-      width: 50%;
+      width: 45%;
+      margin-right: 0;
+      text-align: center;
     }
     @media (max-width: 500px) {
       width: 100%;
       margin-bottom: 25px;
+      margin-right: 0;
       padding-bottom: 0;
     }
     img {
       max-width: 80px;
       max-height: 80px;
-      // height: 40px;
-      margin-bottom: 28px;
+      @media (max-width: 768px) {
+        max-width: 60px;
+        max-height: 60px;
+      }
+      @media (max-width: 500px) {
+        max-width: 70px;
+        max-height: 70px;
+      }
       @media (max-width: 460px) {
         padding: 0;
       }
@@ -172,10 +191,30 @@ export const ItemsContainerv2 = styled.ul`
     font-size: 16px;
     color: #605E5C;
     text-align: center;
+    @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 26px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 500px) {
+      font-size: 20px;
+      line-height: 28px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
    }
    
    h4 {
     font-size: 18px;
+    @media (max-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 500px) {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
    }
   }
 `;

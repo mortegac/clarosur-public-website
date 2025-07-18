@@ -5,7 +5,7 @@ import { SliceFactory } from "../../../../common/Containers";
 import {
   Description,
   Content,
-  ImgHolder,
+  ImgHolderServices,
   ButtonContainer,
   ListContainer,
   ItemsContainer,
@@ -24,14 +24,14 @@ const Base = (props) => {
       <Content>
 
         {/* 494x575 */}
-        <ImgHolder>
+        <ImgHolderServices>
           <motion.div initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0 }}>
             <picture>
               <source srcSet={image.url} media="(max-width: 630px)" />
               <img src={image.url} alt="HeroImg" />
             </picture>
           </motion.div>
-        </ImgHolder>
+        </ImgHolderServices>
 
         <Description>
           {description[0]?.text && RichText.render(description)}

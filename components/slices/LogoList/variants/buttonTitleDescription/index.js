@@ -8,7 +8,7 @@ const Base = (props) => {
   
   return (
     <Content>   
-      <h2>{title[0]?.text || ""}</h2>
+      <h2 style={{marginBottom:"32px"}}>{title[0]?.text || ""}</h2>
       <LogoListv2 list={props.items} />
     </Content>
   );

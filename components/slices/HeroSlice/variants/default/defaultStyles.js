@@ -48,25 +48,69 @@ export const ButtonContainer = styled.button`
   }
 `;
 
+export const SectionContentWrapper = styled.div`
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+// padding: ${(props) => props.bgImage ? '64px 24px' : '0'};
+padding: 64px 24px;
+position: relative;
+z-index: 10;
+ padding-top: ${(props) => props.paddingTop};
+  padding-bottom: ${(props) => props.paddingBottom};
+  
+
+@media (max-width: 768px) {
+  padding: ${(props) => props.bgImage ? '32px 16px' : '0'};
+}
+  
+
+  
+    
+
+`;
 export const Content = styled.div`
   width: 100%;
+  max-width: 1136px;
+  margin: 0 auto;
+  margin-top: 42px;
+  padding: 8px 16px;
+  position: relative;
+  z-index: 10;
+    
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  padding-top:30px;
-  margin-bottom:102px;
+  justify-content: start;
+  // padding-top:30px;
+   
+  // margin-bottom:102px;
+  position: relative;
+  z-index: 10;
   
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     flex-direction: column;
     text-align: center;
   }
+  
+  @media (max-width: 688px) {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    min-height: 300px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
   }
 `;
 
 export const Description = styled.div`
-  z-index: 2;
+  z-index: 10;
+  
+  background: rgba(255,255,255,.8);
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,6 +120,12 @@ export const Description = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     width: 100%;
     margin-left: 0;
+  }
+  @media (max-width: 688px) {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     text-align: center;
@@ -135,18 +185,47 @@ export const Description = styled.div`
 `;
 
 export const ImgHolder = styled.div`
-  z-index: 2;
-  backgroundImage: ${(props) => props.bgImage || ""}
-  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 528px;
+  z-index: 1;
+  background-image: ${(props) => props.bgImage ? `url(${props.bgImage})` : ""};
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  
   img {
     width: 100%;
-    border-radius: 50%;
+    height: 100%;
+  //   max-height: 400px;
+  //   object-fit: cover;
+  //   border-radius: 0;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    width: 80%;
-    border-radius: 24px;
+    width: 100%;
+    border-radius: 0;
     img {
       width: 100%;
+      height: 100%;
+      max-height: 400px;
+      object-fit: cover;
+    }
+  }
+  
+  @media (max-width: 688px) {
+    max-height: 350px;
+    height: 350px;
+    img {
+      max-height: 350px;
+      height: 350px;
     }
   }
 `;

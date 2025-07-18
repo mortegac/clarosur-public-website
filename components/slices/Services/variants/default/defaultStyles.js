@@ -98,17 +98,28 @@ export const Description = styled.div`
   }
   p {
     margin: 0;
+    font-weight:  ${(props) => props.theme.typography.p.desktop.fontWeight};
     line-height:  ${(props) => props.theme.typography.p.desktop.lineHeight};
     font-size: ${(props) => props.theme.typography.p.desktop.fontSize};
-    font-weight: ${(props) => props.theme.typography.p.desktop.fontWeight};
+    text-align: justify;
+    color: ${(props) => props.theme.colors.textPrimary};
     @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-      margin-bottom: 22px;
+      width: 70%;
+      font-weight:  ${(props) => props.theme.typography.p.desktop.fontWeight};
+      line-height:  ${(props) => props.theme.typography.p.desktop.lineHeight};
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+      width: 100%;
       text-align: center;
+      font-size: 20px;
+      line-height: 28px;
     }
   }
 `;
 
-export const ImgHolder = styled.div`
+export const ImgHolderServices = styled.div`
   width: 50%;
   img {
     width: 100%;
@@ -208,9 +219,16 @@ export const ItemsContainer = styled.ul`
   .img {
     margin-right: 18px;
     margin-bottom: 50px;
+    @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+      width: 60px;
+      height: 60px;
+      margin-right: 12px;
+      margin-bottom: 20px;
+    }
     @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
-      width: 100px;
-      height: 100px;
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
       margin-bottom: 16px;
     }
   }
@@ -248,14 +266,14 @@ export const ItemsContainer = styled.ul`
       width: 70%;
       font-weight:  ${(props) => props.theme.typography.p.desktop.fontWeight};
       line-height:  ${(props) => props.theme.typography.p.desktop.lineHeight};
-      font-size: ${(props) => props.theme.typography.p.desktop.fontSize};
+      font-size: 18px;
       margin-bottom: 16px;
-      
-      
     }
     @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
       width: 100%;
       text-align: center;
+      font-size: 20px;
+      line-height: 28px;
     }
   }
 

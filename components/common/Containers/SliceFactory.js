@@ -10,9 +10,15 @@ export const SliceFactory = (
 ) => {
   const { sliceProps, sliceContainerProps, sectionContainerProps } = options;
   const SliceWrapper = props => {
+    // Extraer la imagen de fondo de los props del slice
+    const bgImageSrc = props?.primary?.image?.url || sectionContainerProps.bgImageSrc;
+    
     return (
-      <SectionContainer {...sectionContainerProps}>
-        {/* <SectionContainer {...sectionContainerProps} bgImageUrl={props?.primary?.image?.url || ""}> */}
+      <SectionContainer 
+        {...sectionContainerProps} 
+        // bgImage={!!bgImageSrc}
+        // bgImageSrc={bgImageSrc}
+      >
         <SliceContainer {...sliceContainerProps}>
           <Slice {...props} {...sliceProps} />
         </SliceContainer>
