@@ -25,6 +25,26 @@
           "label": "seoDescription",
           "placeholder": ""
         }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "landing_faq": {
+              "type": "SharedSlice"
+            },
+            "landing_hero": {
+              "type": "SharedSlice"
+            },
+            "landing_timeline": {
+              "type": "SharedSlice"
+            },
+            "landing_customer_review": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     }
   }

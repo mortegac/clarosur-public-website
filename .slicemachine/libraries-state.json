@@ -1112,6 +1112,122 @@
           }
         }
       },
+      "landing_customer_review": {
+        "library": "slices",
+        "id": "landing_customer_review",
+        "name": "LandingCustomerReview",
+        "description": "LandingCustomerReview",
+        "model": {
+          "id": "landing_customer_review",
+          "type": "SharedSlice",
+          "name": "LandingCustomerReview",
+          "description": "LandingCustomerReview",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LandingCustomerReview",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                }
+              },
+              "items": {
+                "usericon": {
+                  "type": "Image",
+                  "config": {
+                    "label": "userIcon",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "username": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "userName",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "userreview": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "userReview",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "stars": {
+                  "type": "Number",
+                  "config": {
+                    "label": "stars",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "usericon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636"
+                },
+                "username": [
+                  {
+                    "type": "paragraph",
+                    "text": "Eu et magna qui deserunt ea aliqua laboris sint eu voluptate pariatur ea Lorem pariatur reprehenderit.",
+                    "spans": []
+                  }
+                ],
+                "userreview": [
+                  {
+                    "type": "paragraph",
+                    "text": "Nostrud velit reprehenderit eiusmod incididunt nisi. Ut consectetur aliquip consectetur Lorem mollit.",
+                    "spans": []
+                  }
+                ],
+                "stars": 24
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Moment",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "landing_customer_review"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "landing_faq": {
         "library": "slices",
         "id": "landing_faq",

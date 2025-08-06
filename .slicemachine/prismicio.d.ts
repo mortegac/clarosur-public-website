@@ -177,6 +177,8 @@ interface HomepageDocumentData {
  */
 export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
 
+type LandingpageDocumentDataSlicesSlice = LandingFaqSlice | LandingHeroSlice | LandingTimelineSlice | LandingCustomerReviewSlice
+
 /**
  * Content for LandingPage documents
  */
@@ -202,6 +204,17 @@ interface LandingpageDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	seodescription: prismic.KeyTextField;
+	
+	/**
+	 * Slice Zone field in *LandingPage*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingpage.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<LandingpageDocumentDataSlicesSlice>;
 }
 
 /**
@@ -1158,6 +1171,89 @@ type IdeasSliceVariation = IdeasSliceDefault | IdeasSliceNoButtonNobg | IdeasSli
 export type IdeasSlice = prismic.SharedSlice<"ideas", IdeasSliceVariation>;
 
 /**
+ * Primary content in *LandingCustomerReview → Default → Primary*
+ */
+export interface LandingCustomerReviewSliceDefaultPrimary {
+	/**
+	 * Title field in *LandingCustomerReview → Default → Primary*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: landing_customer_review.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.TitleField;
+}
+
+/**
+ * Primary content in *LandingCustomerReview → Items*
+ */
+export interface LandingCustomerReviewSliceDefaultItem {
+	/**
+	 * userIcon field in *LandingCustomerReview → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_customer_review.items[].usericon
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	usericon: prismic.ImageField<never>;
+	
+	/**
+	 * userName field in *LandingCustomerReview → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_customer_review.items[].username
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	username: prismic.RichTextField;
+	
+	/**
+	 * userReview field in *LandingCustomerReview → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_customer_review.items[].userreview
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	userreview: prismic.RichTextField;
+	
+	/**
+	 * stars field in *LandingCustomerReview → Items*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_customer_review.items[].stars
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	stars: prismic.NumberField;
+}
+
+/**
+ * Default variation for LandingCustomerReview Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: LandingCustomerReview
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingCustomerReviewSliceDefault = prismic.SharedSliceVariation<"default", Simplify<LandingCustomerReviewSliceDefaultPrimary>, Simplify<LandingCustomerReviewSliceDefaultItem>>;
+
+/**
+ * Slice variation for *LandingCustomerReview*
+ */
+type LandingCustomerReviewSliceVariation = LandingCustomerReviewSliceDefault
+
+/**
+ * LandingCustomerReview Shared Slice
+ *
+ * - **API ID**: `landing_customer_review`
+ * - **Description**: LandingCustomerReview
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingCustomerReviewSlice = prismic.SharedSlice<"landing_customer_review", LandingCustomerReviewSliceVariation>;
+
+/**
  * Primary content in *LandingFaq → Default → Primary*
  */
 export interface LandingFaqSliceDefaultPrimary {
@@ -2076,6 +2172,7 @@ declare module "@prismicio/client" {
 			HomepageDocumentDataSlicesSlice,
 			LandingpageDocument,
 			LandingpageDocumentData,
+			LandingpageDocumentDataSlicesSlice,
 			MenutopDocument,
 			MenutopDocumentData,
 			MenutopDocumentDataMenulinksItem,
@@ -2115,6 +2212,11 @@ declare module "@prismicio/client" {
 			IdeasSliceDefault,
 			IdeasSliceNoButtonNobg,
 			IdeasSliceNoButton,
+			LandingCustomerReviewSlice,
+			LandingCustomerReviewSliceDefaultPrimary,
+			LandingCustomerReviewSliceDefaultItem,
+			LandingCustomerReviewSliceVariation,
+			LandingCustomerReviewSliceDefault,
 			LandingFaqSlice,
 			LandingFaqSliceDefaultPrimary,
 			LandingFaqSliceDefaultItem,

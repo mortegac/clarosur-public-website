@@ -5,6 +5,7 @@ import Comparative from './Comparative';
 import Contact from './Contact';
 import Hero from './Hero';
 import Ideas from './Ideas';
+import LandingCustomerReview from './LandingCustomerReview';
 import LandingFaq from './LandingFaq';
 import LandingHero from './LandingHero';
 import LandingTimeline from './LandingTimeline';
@@ -20,6 +21,7 @@ export {
 	Contact,
 	Hero,
 	Ideas,
+	LandingCustomerReview,
 	LandingFaq,
 	LandingHero,
 	LandingTimeline,
@@ -36,6 +38,7 @@ export const components = {
 	contact: Contact,
 	hero: Hero,
 	ideas: Ideas,
+	landing_customer_review: LandingCustomerReview,
 	landing_faq: LandingFaq,
 	landing_hero: LandingHero,
 	landing_timeline: LandingTimeline,

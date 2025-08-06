@@ -72,6 +72,25 @@
         },
         "items": {}
       }
+    },
+    "LandingCustomerReview": {
+      "default": {
+        "primary": {},
+        "items": {
+          "username": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "userreview": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   }
 }
