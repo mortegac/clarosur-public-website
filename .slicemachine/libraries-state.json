@@ -126,7 +126,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/CardList/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\CardList\\default\\preview.png",
             "width": 2714,
             "height": 1606
           }
@@ -369,7 +369,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Comparative/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Comparative\\default\\preview.png",
             "width": 1059,
             "height": 795
           }
@@ -526,7 +526,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Contact/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Contact\\default\\preview.png",
             "width": 1200,
             "height": 1772
           }
@@ -848,17 +848,17 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Hero/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Hero\\default\\preview.png",
             "width": 1562,
             "height": 669
           },
           "noButtonNoDescription": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Hero/noButtonNoDescription/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Hero\\noButtonNoDescription\\preview.png",
             "width": 1562,
             "height": 669
           },
           "noButton": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Hero/noButton/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Hero\\noButton\\preview.png",
             "width": 1562,
             "height": 669
           }
@@ -1096,21 +1096,361 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Ideas/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Ideas\\default\\preview.png",
             "width": 1398,
             "height": 432
           },
           "noButtonNobg": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Ideas/noButtonNobg/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Ideas\\noButtonNobg\\preview.png",
             "width": 1398,
             "height": 432
           },
           "noButton": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Ideas/noButton/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Ideas\\noButton\\preview.png",
             "width": 1398,
             "height": 432
           }
         }
+      },
+      "landing_faq": {
+        "library": "slices",
+        "id": "landing_faq",
+        "name": "LandingFaq",
+        "description": "LandingFaq",
+        "model": {
+          "id": "landing_faq",
+          "type": "SharedSlice",
+          "name": "LandingFaq",
+          "description": "LandingFaq",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LandingFaq",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                }
+              },
+              "items": {
+                "question": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "question",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "answer": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "answer",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "question": [
+                  {
+                    "type": "paragraph",
+                    "text": "Dolor ex reprehenderit nisi aute voluptate mollit. Ad exercitation minim est anim minim aliqua nostrud sint elit eu. Exercitation officia dolore incididunt id culpa veniam amet.",
+                    "spans": []
+                  }
+                ],
+                "answer": [
+                  {
+                    "type": "paragraph",
+                    "text": "Ullamco laboris reprehenderit id nulla incididunt quis Lorem sit deserunt ipsum amet aliquip.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Whole",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "landing_faq"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "landing_hero": {
+        "library": "slices",
+        "id": "landing_hero",
+        "name": "LandingHero",
+        "description": "LandingHero",
+        "model": {
+          "id": "landing_hero",
+          "type": "SharedSlice",
+          "name": "LandingHero",
+          "description": "LandingHero",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LandingHero",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "subtitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "subtitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "formtitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "formTitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "formsubtitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "formSubtitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "ctatext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "ctaText",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "bgimage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "bgImage",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {
+                "icon": {
+                  "type": "Image",
+                  "config": {
+                    "label": "icon",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "keyword": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "keyword",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
+                },
+                "keyword": [
+                  {
+                    "type": "paragraph",
+                    "text": "Sint ea voluptate occaecat irure non non laboris non adipisicing.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Planet",
+                  "spans": []
+                }
+              ],
+              "subtitle": [
+                {
+                  "type": "paragraph",
+                  "text": "Sint elit aute ut sit cillum consectetur nulla consequat nisi voluptate ad ut. Officia officia incididunt ea magna in quis labore duis ut officia excepteur ut voluptate culpa. Laboris magna et anim velit.",
+                  "spans": []
+                }
+              ],
+              "formtitle": [
+                {
+                  "type": "heading1",
+                  "text": "Yourself",
+                  "spans": []
+                }
+              ],
+              "formsubtitle": [
+                {
+                  "type": "paragraph",
+                  "text": "Amet occaecat cillum pariatur occaecat labore ex adipisicing enim mollit officia id exercitation voluptate irure adipisicing.",
+                  "spans": []
+                }
+              ],
+              "ctatext": [
+                {
+                  "type": "paragraph",
+                  "text": "Nulla ut consequat fugiat ipsum commodo irure proident. Amet est nulla in occaecat nulla labore aliqua adipisicing fugiat qui ea.",
+                  "spans": []
+                }
+              ],
+              "bgimage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea"
+              }
+            },
+            "slice_type": "landing_hero"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "landing_timeline": {
+        "library": "slices",
+        "id": "landing_timeline",
+        "name": "LandingTimeline",
+        "description": "LandingTimeline",
+        "model": {
+          "id": "landing_timeline",
+          "type": "SharedSlice",
+          "name": "LandingTimeline",
+          "description": "LandingTimeline",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LandingTimeline",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                }
+              },
+              "items": {
+                "step": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "step",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "step": [
+                  {
+                    "type": "paragraph",
+                    "text": "Eiusmod do ad commodo officia aliqua officia non nulla duis velit aliquip. Labore eu quis voluptate et elit cupidatat quis incididunt irure eiusmod enim.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Letter",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "landing_timeline"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
       },
       "logo_list": {
         "library": "slices",
@@ -1344,17 +1684,17 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/LogoList/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\LogoList\\default\\preview.png",
             "width": 1133,
             "height": 177
           },
           "onlyLogosBg": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/LogoList/onlyLogosBg/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\LogoList\\onlyLogosBg\\preview.png",
             "width": 1133,
             "height": 177
           },
           "buttonTitleDescription": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/LogoList/buttonTitleDescription/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\LogoList\\buttonTitleDescription\\preview.png",
             "width": 1820,
             "height": 727
           }
@@ -1491,12 +1831,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Metrics/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Metrics\\default\\preview.png",
             "width": 1375,
             "height": 486
           },
           "noBackground": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Metrics/noBackground/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Metrics\\noBackground\\preview.png",
             "width": 1166,
             "height": 372
           }
@@ -1601,7 +1941,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Projects/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Projects\\default\\preview.png",
             "width": 1127,
             "height": 626
           }
@@ -1943,22 +2283,22 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Services/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Services\\default\\preview.png",
             "width": 1194,
             "height": 656
           },
           "noIconsNoButtons": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Services/noIconsNoButtons/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Services\\noIconsNoButtons\\preview.png",
             "width": 1194,
             "height": 656
           },
           "noIcons": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Services/noIcons/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Services\\noIcons\\preview.png",
             "width": 1194,
             "height": 656
           },
           "imageText": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Services/imageText/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Services\\imageText\\preview.png",
             "width": 1194,
             "height": 656
           }
@@ -2086,7 +2426,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Staff/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Staff\\default\\preview.png",
             "width": 1134,
             "height": 1177
           }
