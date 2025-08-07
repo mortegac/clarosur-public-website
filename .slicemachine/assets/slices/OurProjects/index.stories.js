@@ -1,0 +1,9 @@
+import MyComponent from '../../../../slices/OurProjects';
+
+export default {
+  title: 'slices/OurProjects'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"projectdescription":[{"type":"paragraph","text":"Laboris velit enim velit exercitation aliqua laborum reprehenderit cupidatat aliqua et ea consectetur laboris et sunt. Ullamco cillum commodo est eiusmod ad ex adipisicing sunt sit officia excepteur quis. Occaecat duis anim sint voluptate aliqua consectetur esse fugiat magna dolore labore nulla.","spans":[]}],"before":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1586952518485-11b180e92764"},"after":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1545239351-1141bd82e8a6"}}],"primary":{"title":[{"type":"heading1","text":"Shaking","spans":[]}],"description":[{"type":"paragraph","text":"Irure voluptate excepteur ipsum do est non ad voluptate dolore ut.","spans":[]}]},"slice_type":"our_projects","id":"_Default"}} />
+_Default.storyName = ''

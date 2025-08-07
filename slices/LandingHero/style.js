@@ -7,7 +7,7 @@ export const Section = styled.div`
   gap: 3rem;
   padding: 4rem 10rem;
   background: ${({ bgimage }) =>
-    bgimage ? `url(${bgimage}) center/cover no-repeat` : "#243c70"};
+    bgimage ? `url(${bgimage}) center/cover no-repeat` : "#0066CC"};
   color: white;
   z-index: 1;
 
@@ -42,19 +42,22 @@ export const Keyword = styled.div`
   img {
     width: 24px;
     height: 24px;
+    filter: invert(1);
   }
 `;
 
 export const Title = styled.div`
   margin-bottom: 10px;
   h1 {
-    margin: 0;
+    margin: 0 0 5px 0;
     text-align: left;
+    font-size: 2rem;
+    line-height: 1;
   }
 
   p {
     font-size: 1rem;
-    margin: 0;
+    margin: 0 0 10px 0;
   }
 `;
 

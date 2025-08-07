@@ -1,0 +1,88 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "bgimage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0"
+        },
+        "servicetitle": [
+          {
+            "type": "heading2",
+            "text": "Magic",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Voluptate irure duis irure exercitation aute dolor est laborum cillum esse labore sint deserunt exercitation. Ut pariatur aliqua nostrud adipisicing do aliquip ea occaecat nostrud pariatur cillum.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Mainly",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "landing_services"
+  },
+  {
+    "variation": "nohover",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "bgimage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"
+        },
+        "servicetitle": [
+          {
+            "type": "heading2",
+            "text": "White",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Id ex laborum officia proident cupidatat ut nisi eiusmod elit quis. Tempor aliqua anim id ea minim.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Parallel",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "landing_services"
+  }
+]
