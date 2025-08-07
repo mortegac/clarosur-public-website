@@ -1,98 +1,6 @@
 {
   "slices": {
     "components": {
-      "about": {
-        "library": "slices",
-        "id": "about",
-        "name": "About",
-        "description": "About",
-        "model": {
-          "id": "about",
-          "type": "SharedSlice",
-          "name": "About",
-          "description": "About",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "About",
-              "primary": {
-                "title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "heading1",
-                    "label": "Title",
-                    "placeholder": "This is where it all begins..."
-                  }
-                },
-                "description": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "paragraph",
-                    "label": "Description",
-                    "placeholder": "A nice description of your feature"
-                  }
-                },
-                "video": {
-                  "type": "Embed",
-                  "config": {
-                    "label": "video",
-                    "placeholder": ""
-                  }
-                }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
-            "primary": {
-              "title": [
-                {
-                  "type": "heading1",
-                  "text": "Itself",
-                  "spans": []
-                }
-              ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Et magna veniam occaecat.",
-                  "spans": []
-                }
-              ],
-              "video": {
-                "embed_url": "https://twitter.com/timbenniks/status/1304146886832594944",
-                "author_name": "Tim Benniks",
-                "author_url": "https://twitter.com/timbenniks",
-                "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">I’ve been diving deep on <a href=\"https://twitter.com/prismicio?ref_src=twsrc%5Etfw\">@prismicio</a> <a href=\"https://twitter.com/hashtag/slicemachine?src=hash&amp;ref_src=twsrc%5Etfw\">#slicemachine</a> today. I made all my own components and I used custom slices. It works like a charm with <a href=\"https://twitter.com/nuxt_js?ref_src=twsrc%5Etfw\">@nuxt_js</a>. Also\": I’m coding with this view. <a href=\"https://t.co/F0I8X9gz39\">pic.twitter.com/F0I8X9gz39</a></p>&mdash; Tim Benniks (@timbenniks) <a href=\"https://twitter.com/timbenniks/status/1304146886832594944?ref_src=twsrc%5Etfw\">September 10, 2020</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
-                "width": 550,
-                "height": null,
-                "type": "rich",
-                "cache_age": "3153600000",
-                "provider_name": "Twitter",
-                "provider_url": "http://www.twitter.com/",
-                "version": "1.0"
-              }
-            },
-            "slice_type": "about"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {}
-      },
       "card_list": {
         "library": "slices",
         "id": "card_list",
@@ -218,7 +126,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\CardList\\default\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\CardList\\default\\preview.png",
             "width": 2714,
             "height": 1606
           }
@@ -461,7 +369,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Comparative\\default\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Comparative\\default\\preview.png",
             "width": 1059,
             "height": 795
           }
@@ -618,7 +526,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Contact\\default\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Contact\\default\\preview.png",
             "width": 1200,
             "height": 1772
           }
@@ -940,17 +848,17 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Hero\\default\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Hero\\default\\preview.png",
             "width": 1562,
             "height": 669
           },
           "noButtonNoDescription": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Hero\\noButtonNoDescription\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Hero\\noButtonNoDescription\\preview.png",
             "width": 1562,
             "height": 669
           },
           "noButton": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Hero\\noButton\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Hero\\noButton\\preview.png",
             "width": 1562,
             "height": 669
           }
@@ -1188,21 +1096,113 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Ideas\\default\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Ideas\\default\\preview.png",
             "width": 1398,
             "height": 432
           },
           "noButtonNobg": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Ideas\\noButtonNobg\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Ideas\\noButtonNobg\\preview.png",
             "width": 1398,
             "height": 432
           },
           "noButton": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Ideas\\noButton\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Ideas\\noButton\\preview.png",
             "width": 1398,
             "height": 432
           }
         }
+      },
+      "about": {
+        "library": "slices",
+        "id": "about",
+        "name": "LandingAbout",
+        "description": "About",
+        "model": {
+          "id": "about",
+          "type": "SharedSlice",
+          "name": "LandingAbout",
+          "description": "About",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "About",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                },
+                "video": {
+                  "type": "Embed",
+                  "config": {
+                    "label": "video",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Itself",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Et magna veniam occaecat.",
+                  "spans": []
+                }
+              ],
+              "video": {
+                "embed_url": "https://twitter.com/timbenniks/status/1304146886832594944",
+                "author_name": "Tim Benniks",
+                "author_url": "https://twitter.com/timbenniks",
+                "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">I’ve been diving deep on <a href=\"https://twitter.com/prismicio?ref_src=twsrc%5Etfw\">@prismicio</a> <a href=\"https://twitter.com/hashtag/slicemachine?src=hash&amp;ref_src=twsrc%5Etfw\">#slicemachine</a> today. I made all my own components and I used custom slices. It works like a charm with <a href=\"https://twitter.com/nuxt_js?ref_src=twsrc%5Etfw\">@nuxt_js</a>. Also\": I’m coding with this view. <a href=\"https://t.co/F0I8X9gz39\">pic.twitter.com/F0I8X9gz39</a></p>&mdash; Tim Benniks (@timbenniks) <a href=\"https://twitter.com/timbenniks/status/1304146886832594944?ref_src=twsrc%5Etfw\">September 10, 2020</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+                "width": 550,
+                "height": null,
+                "type": "rich",
+                "cache_age": "3153600000",
+                "provider_name": "Twitter",
+                "provider_url": "http://www.twitter.com/",
+                "version": "1.0"
+              }
+            },
+            "slice_type": "about"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
       },
       "landing_customer_review": {
         "library": "slices",
@@ -1577,6 +1577,130 @@
               }
             },
             "slice_type": "landing_hero"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "our_projects": {
+        "library": "slices",
+        "id": "our_projects",
+        "name": "LandingProjects",
+        "description": "OurProjects",
+        "model": {
+          "id": "our_projects",
+          "type": "SharedSlice",
+          "name": "LandingProjects",
+          "description": "OurProjects",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "OurProjects",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {
+                "projectdescription": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "projectDescription",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "before": {
+                  "type": "Image",
+                  "config": {
+                    "label": "before",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "after": {
+                  "type": "Image",
+                  "config": {
+                    "label": "after",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "projectdescription": [
+                  {
+                    "type": "paragraph",
+                    "text": "Laboris velit enim velit exercitation aliqua laborum reprehenderit cupidatat aliqua et ea consectetur laboris et sunt. Ullamco cillum commodo est eiusmod ad ex adipisicing sunt sit officia excepteur quis. Occaecat duis anim sint voluptate aliqua consectetur esse fugiat magna dolore labore nulla.",
+                    "spans": []
+                  }
+                ],
+                "before": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764"
+                },
+                "after": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Shaking",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Irure voluptate excepteur ipsum do est non ad voluptate dolore ut.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "our_projects"
           }
         },
         "meta": {
@@ -2102,17 +2226,17 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\LogoList\\default\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\LogoList\\default\\preview.png",
             "width": 1133,
             "height": 177
           },
           "onlyLogosBg": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\LogoList\\onlyLogosBg\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\LogoList\\onlyLogosBg\\preview.png",
             "width": 1133,
             "height": 177
           },
           "buttonTitleDescription": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\LogoList\\buttonTitleDescription\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\LogoList\\buttonTitleDescription\\preview.png",
             "width": 1820,
             "height": 727
           }
@@ -2249,140 +2373,16 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Metrics\\default\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Metrics\\default\\preview.png",
             "width": 1375,
             "height": 486
           },
           "noBackground": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Metrics\\noBackground\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Metrics\\noBackground\\preview.png",
             "width": 1166,
             "height": 372
           }
         }
-      },
-      "our_projects": {
-        "library": "slices",
-        "id": "our_projects",
-        "name": "OurProjects",
-        "description": "OurProjects",
-        "model": {
-          "id": "our_projects",
-          "type": "SharedSlice",
-          "name": "OurProjects",
-          "description": "OurProjects",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "OurProjects",
-              "primary": {
-                "title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "heading1",
-                    "label": "Title",
-                    "placeholder": "This is where it all begins..."
-                  }
-                },
-                "description": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "paragraph",
-                    "label": "Description",
-                    "placeholder": "A nice description of your feature"
-                  }
-                }
-              },
-              "items": {
-                "projectdescription": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "projectDescription",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                },
-                "before": {
-                  "type": "Image",
-                  "config": {
-                    "label": "before",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                },
-                "after": {
-                  "type": "Image",
-                  "config": {
-                    "label": "after",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                }
-              },
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {
-                "projectdescription": [
-                  {
-                    "type": "paragraph",
-                    "text": "Laboris velit enim velit exercitation aliqua laborum reprehenderit cupidatat aliqua et ea consectetur laboris et sunt. Ullamco cillum commodo est eiusmod ad ex adipisicing sunt sit officia excepteur quis. Occaecat duis anim sint voluptate aliqua consectetur esse fugiat magna dolore labore nulla.",
-                    "spans": []
-                  }
-                ],
-                "before": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": null,
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764"
-                },
-                "after": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": null,
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6"
-                }
-              }
-            ],
-            "primary": {
-              "title": [
-                {
-                  "type": "heading1",
-                  "text": "Shaking",
-                  "spans": []
-                }
-              ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Irure voluptate excepteur ipsum do est non ad voluptate dolore ut.",
-                  "spans": []
-                }
-              ]
-            },
-            "slice_type": "our_projects"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {}
       },
       "projects": {
         "library": "slices",
@@ -2483,7 +2483,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Projects\\default\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Projects\\default\\preview.png",
             "width": 1127,
             "height": 626
           }
@@ -2825,22 +2825,22 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Services\\default\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Services\\default\\preview.png",
             "width": 1194,
             "height": 656
           },
           "noIconsNoButtons": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Services\\noIconsNoButtons\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Services\\noIconsNoButtons\\preview.png",
             "width": 1194,
             "height": 656
           },
           "noIcons": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Services\\noIcons\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Services\\noIcons\\preview.png",
             "width": 1194,
             "height": 656
           },
           "imageText": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Services\\imageText\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Services\\imageText\\preview.png",
             "width": 1194,
             "height": 656
           }
@@ -2968,7 +2968,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-website\\slices\\Staff\\default\\preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Staff\\default\\preview.png",
             "width": 1134,
             "height": 1177
           }
