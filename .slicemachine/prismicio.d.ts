@@ -177,7 +177,7 @@ interface HomepageDocumentData {
  */
 export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
 
-type LandingpageDocumentDataSlicesSlice = LandingCustomerReviewSlice | LandingFaqSlice | LandingHeroSlice | LandingTimelineSlice | AboutSlice | LandingServicesSlice | OurProjectsSlice
+type LandingpageDocumentDataSlicesSlice = LandingCustomerReviewSlice | LandingFaqSlice | LandingHeroSlice | LandingTimelineSlice | AboutSlice | LandingServicesSlice | OurProjectsSlice | SliceBenefitsSlice
 
 /**
  * Content for LandingPage documents
@@ -1227,6 +1227,79 @@ type AboutSliceVariation = AboutSliceDefault
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type AboutSlice = prismic.SharedSlice<"about", AboutSliceVariation>;
+
+/**
+ * Primary content in *LandingBenefits → Default → Primary*
+ */
+export interface SliceBenefitsSliceDefaultPrimary {
+	/**
+	 * Title field in *LandingBenefits → Default → Primary*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: slice_benefits.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.TitleField;
+}
+
+/**
+ * Primary content in *LandingBenefits → Items*
+ */
+export interface SliceBenefitsSliceDefaultItem {
+	/**
+	 * icon field in *LandingBenefits → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: slice_benefits.items[].icon
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	icon: prismic.ImageField<never>;
+	
+	/**
+	 * keyTitle field in *LandingBenefits → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: slice_benefits.items[].keytitle
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	keytitle: prismic.RichTextField;
+	
+	/**
+	 * description field in *LandingBenefits → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: slice_benefits.items[].description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+}
+
+/**
+ * Default variation for LandingBenefits Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: SliceBenefits
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SliceBenefitsSliceDefault = prismic.SharedSliceVariation<"default", Simplify<SliceBenefitsSliceDefaultPrimary>, Simplify<SliceBenefitsSliceDefaultItem>>;
+
+/**
+ * Slice variation for *LandingBenefits*
+ */
+type SliceBenefitsSliceVariation = SliceBenefitsSliceDefault
+
+/**
+ * LandingBenefits Shared Slice
+ *
+ * - **API ID**: `slice_benefits`
+ * - **Description**: SliceBenefits
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SliceBenefitsSlice = prismic.SharedSlice<"slice_benefits", SliceBenefitsSliceVariation>;
 
 /**
  * Primary content in *LandingCustomerReview → Default → Primary*
@@ -2499,6 +2572,11 @@ declare module "@prismicio/client" {
 			AboutSliceDefaultPrimary,
 			AboutSliceVariation,
 			AboutSliceDefault,
+			SliceBenefitsSlice,
+			SliceBenefitsSliceDefaultPrimary,
+			SliceBenefitsSliceDefaultItem,
+			SliceBenefitsSliceVariation,
+			SliceBenefitsSliceDefault,
 			LandingCustomerReviewSlice,
 			LandingCustomerReviewSliceDefaultPrimary,
 			LandingCustomerReviewSliceDefaultItem,

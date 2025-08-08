@@ -93,6 +93,26 @@
       }
     },
     "About": {},
-    "OurProjects": {}
+    "OurProjects": {},
+    "SliceBenefits": {},
+    "LandingBenefits": {
+      "default": {
+        "primary": {},
+        "items": {
+          "keytitle": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
   }
 }

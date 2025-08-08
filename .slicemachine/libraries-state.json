@@ -1204,6 +1204,114 @@
         },
         "screenshotPaths": {}
       },
+      "slice_benefits": {
+        "library": "slices",
+        "id": "slice_benefits",
+        "name": "LandingBenefits",
+        "description": "SliceBenefits",
+        "model": {
+          "id": "slice_benefits",
+          "type": "SharedSlice",
+          "name": "LandingBenefits",
+          "description": "SliceBenefits",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "SliceBenefits",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                }
+              },
+              "items": {
+                "icon": {
+                  "type": "Image",
+                  "config": {
+                    "label": "icon",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "keytitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "keyTitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
+                },
+                "keytitle": [
+                  {
+                    "type": "paragraph",
+                    "text": "Non laborum nulla nisi ad enim laborum et ullamco excepteur sunt excepteur tempor in minim amet.",
+                    "spans": []
+                  }
+                ],
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Consequat et sunt duis ipsum ipsum esse. Amet eiusmod consectetur magna culpa occaecat magna pariatur deserunt cupidatat.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Slave",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "slice_benefits"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "landing_customer_review": {
         "library": "slices",
         "id": "landing_customer_review",

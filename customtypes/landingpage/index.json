@@ -51,6 +51,9 @@
             },
             "our_projects": {
               "type": "SharedSlice"
+            },
+            "slice_benefits": {
+              "type": "SharedSlice"
             }
           }
         }

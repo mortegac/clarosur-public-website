@@ -6,6 +6,7 @@ import Contact from './Contact';
 import Hero from './Hero';
 import Ideas from './Ideas';
 import LandingAbout from './LandingAbout';
+import LandingBenefits from './LandingBenefits';
 import LandingCustomerReview from './LandingCustomerReview';
 import LandingFaq from './LandingFaq';
 import LandingHero from './LandingHero';
@@ -25,6 +26,7 @@ export {
 	Hero,
 	Ideas,
 	LandingAbout,
+	LandingBenefits,
 	LandingCustomerReview,
 	LandingFaq,
 	LandingHero,
@@ -45,6 +47,7 @@ export const components = {
 	hero: Hero,
 	ideas: Ideas,
 	about: LandingAbout,
+	slice_benefits: LandingBenefits,
 	landing_customer_review: LandingCustomerReview,
 	landing_faq: LandingFaq,
 	landing_hero: LandingHero,

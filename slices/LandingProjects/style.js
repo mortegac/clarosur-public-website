@@ -59,7 +59,7 @@ const ProjectDescription = styled.div`
 
 const CompareSliderWrapper = styled.div`
   width: 100%;
-  max-width: 400px;
+  max-width: 100%;
   margin: 0 auto;
   border-radius: 16px;
   overflow: hidden;
