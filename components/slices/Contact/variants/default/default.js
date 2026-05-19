@@ -1,15 +1,10 @@
 import React, { useState, useEffect, useRef, useReducer } from "react";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
-import emailjs, { init } from "emailjs-com";
 
 import { SliceFactory } from "../../../../common/Containers";
 import { PageContainer, ButtonContainer, SectionContainer, FormContainer } from "../default/defaultStyles";
 import { RichText } from "prismic-reactjs";
-
-const SERVICE = "service_yy76iay";
-const TEMPLATE = "template_tjnet8s";
-init("kDFbozqH1THWp3UdO");  // Public Key
 
 const Base = slice => {
   const { title, subtitle, email, message, name } = slice.primary;
@@ -37,46 +32,35 @@ const Base = slice => {
       text: "Estamos enviando su solicitud.",
     });
 
-    const templateParams = {
-      from_name: data.firstname,
-      to_email: data.email,
-      to_name: data.firstname,
-      message: data.message,
-      reply_to: data.email,
-    };
-
-    emailjs.send(SERVICE, TEMPLATE, { ...templateParams }).then(
-      // emailjs.send("service_1ufc0ju", "template_vk47fc7", templateParams).then(
-      function (response) {
+    fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        origin: "Contact",
+        name: data.firstname,
+        email: data.email,
+        message: data.message,
+      }),
+    })
+      .then(async (res) => {
+        const result = await res.json().catch(() => ({}));
+        if (!res.ok || !result.ok) throw new Error(result?.message || "Error");
         setIsSentEmail({
           sentEmail: true,
           isFailure: false,
           title: "Gracias 🎉",
           text: "Nos pondremos en contacto lo antes posible.",
-          response: response || "",
         });
-      },
-      function (error) {
+      })
+      .catch((error) => {
+        console.log("FAILED...", error);
         setIsSentEmail({
           sentEmail: true,
           isFailure: true,
           title: "Página no encontrada 😭",
           text: "Parece que no podemos encontrar la página que estás buscando",
-          response: response || '',
         });
-        console.log("FAILED...", error);
-      }
-    ).catch(err => setIsSentEmail({
-      sentEmail: true,
-      isFailure: true,
-      title: "Página no encontrada 😭",
-      text: "Parece que no podemos encontrar la página que estás buscando",
-      response: response || '',
-    })
-    );
-
-
-
+      });
   }
   const emailValidation = (e, errors) => {
     const emailPattern =

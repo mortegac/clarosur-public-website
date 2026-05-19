@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import { useEffect, useMemo, useState } from "react";
 import { PrismicRichText } from "@prismicio/react";
 import { useForm } from "react-hook-form";
-import emailjs, { init } from "emailjs-com";
 import {
   Section,
   Title,
@@ -18,11 +17,6 @@ import {
 } from "./style";
 import { asText } from "@prismicio/helpers";
 
-// EmailJS configuration
-const SERVICE_ID = "service_yy76iay";
-const TEMPLATE_ID = "template_tjnet8s";
-const PUBLIC_KEY = "kDFbozqH1THWp3UdO";
-
 const LandingHero = ({ slice }) => {
   const { title, subtitle, formtitle, formsubtitle, bgimage, ctatext } =
     slice.primary;
@@ -30,11 +24,6 @@ const LandingHero = ({ slice }) => {
   const router = useRouter();
 
   const [currentLandingPage, setCurrentLandingPage] = useState("");
-
-  // Init EmailJS on client only
-  useEffect(() => {
-    if (typeof window !== "undefined" && PUBLIC_KEY) init(PUBLIC_KEY);
-  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -68,28 +57,21 @@ const LandingHero = ({ slice }) => {
 
     const { name, phone, email, message } = data;
 
-    const templateParams = {
-      from_name: name,
-      to_phone: phone,
-      to_email: email,
-      message: `
-        Nuevo contacto desde el formulario de landing.
-
-        📍 Página: ${currentLandingPage}
-
-        🧑 Nombre: ${name}
-        📧 Email: ${email}
-        📱 Teléfono: ${phone}
-        ${message ? `✉️ Mensaje: ${message}` : ""}
-      `,
-      service: "",
-      budget: "",
-      reply_to: email,
-      to_name: name,
-    };
-
     try {
-      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          origin: "LandingHero",
+          name,
+          email,
+          phone,
+          message,
+          currentLandingPage,
+        }),
+      });
+      const result = await res.json().catch(() => ({}));
+      if (!res.ok || !result.ok) throw new Error(result?.message || "Error");
       setStatus({
         sent: true,
         success: true,
@@ -97,7 +79,7 @@ const LandingHero = ({ slice }) => {
       });
       reset();
     } catch (error) {
-      console.error("EmailJS Error:", error);
+      console.error("Contact API Error:", error);
       setStatus({
         sent: true,
         success: false,
