@@ -75,7 +75,11 @@ export async function getStaticProps({ previewData, params: { uid } }) {
       ],
     });
 
-    const landingNav = await client.getSingle("landingnav");
+    // Use alternative navbar for remodelaciones and ampliaciones landings
+    const useAlternativeNav = uid === "remodelaciones" || uid === "ampliaciones";
+    const landingNav = useAlternativeNav
+      ? await client.getSingle("landingnav_alternative")
+      : await client.getSingle("landingnav");
     const landingFooter = await client.getSingle("landingfooter");
 
     return {

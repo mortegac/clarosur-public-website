@@ -15,7 +15,8 @@
       }
     },
     "landing_project_carousel": {},
-    "carousel": {}
+    "carousel": {},
+    "landingnav_alternative": {}
   },
   "slices": {
     "LandingFaq": {

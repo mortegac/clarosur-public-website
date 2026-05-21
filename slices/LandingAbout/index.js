@@ -9,7 +9,7 @@ const About = ({ slice }) => {
   const image = slice?.primary?.image;
 
   return (
-    <Wrapper>
+    <Wrapper id="nosotros">
       <TextSection>
         <div className="text-block">
           <PrismicRichText field={slice.primary.title} />

@@ -5,7 +5,81 @@ import type * as prismicClient from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-interface CarouselDocumentData {}
+/**
+ * Item in *carousel → Images*
+ */
+export interface CarouselDocumentDataImagesItem {
+	/**
+	 * Image field in *carousel → Images*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: carousel.images[].image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * Content for carousel documents
+ */
+interface CarouselDocumentData {
+	/**
+	 * Project Title field in *carousel*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: Project name
+	 * - **API ID Path**: carousel.project_title
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	project_title: prismic.TitleField;
+	
+	/**
+	 * Location field in *carousel*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: City, State
+	 * - **API ID Path**: carousel.location
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	location: prismic.RichTextField;
+	
+	/**
+	 * Description field in *carousel*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: Describe the project...
+	 * - **API ID Path**: carousel.description
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * Auto Scroll field in *carousel*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: true
+	 * - **API ID Path**: carousel.auto_scroll
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	auto_scroll: prismic.BooleanField;
+	
+	/**
+	 * Images field in *carousel*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: carousel.images[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	images: prismic.GroupField<Simplify<CarouselDocumentDataImagesItem>>;
+}
 
 /**
  * carousel document from Prismic
@@ -322,6 +396,102 @@ interface LandingfooterDocumentData {
 export type LandingfooterDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<LandingfooterDocumentData>, "landingfooter", Lang>;
 
 /**
+ * Item in *landingnav_alternative → navLink*
+ */
+export interface LandingnavAlternativeDocumentDataNavlinkItem {
+	/**
+	 * text field in *landingnav_alternative → navLink*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav_alternative.navlink[].text
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	text: prismic.KeyTextField;
+	
+	/**
+	 * url field in *landingnav_alternative → navLink*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav_alternative.navlink[].url
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	url: prismic.LinkField;
+}
+
+/**
+ * Content for landingnav_alternative documents
+ */
+interface LandingnavAlternativeDocumentData {
+	/**
+	 * logo field in *landingnav_alternative*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav_alternative.logo
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	logo: prismic.ImageField<never>;
+	
+	/**
+	 * logoUrl field in *landingnav_alternative*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav_alternative.logourl
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	logourl: prismic.LinkField;
+	
+	/**
+	 * navLink field in *landingnav_alternative*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav_alternative.navlink[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	navlink: prismic.GroupField<Simplify<LandingnavAlternativeDocumentDataNavlinkItem>>;
+	
+	/**
+	 * callBtn field in *landingnav_alternative*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav_alternative.callbtn
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	callbtn: prismic.KeyTextField;
+	
+	/**
+	 * callBtnLink field in *landingnav_alternative*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav_alternative.callbtnlink
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	callbtnlink: prismic.LinkField;
+}
+
+/**
+ * landingnav_alternative document from Prismic
+ *
+ * - **API ID**: `landingnav_alternative`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type LandingnavAlternativeDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<LandingnavAlternativeDocumentData>, "landingnav_alternative", Lang>;
+
+/**
  * Item in *LandingNav → navLink*
  */
 export interface LandingnavDocumentDataNavlinkItem {
@@ -615,7 +785,7 @@ interface PageDocumentData {
  */
 export type PageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-export type AllDocumentTypes = CarouselDocument | FootermenuDocument | HomepageDocument | LandingfooterDocument | LandingnavDocument | LandingpageDocument | MenutopDocument | PageDocument;
+export type AllDocumentTypes = CarouselDocument | FootermenuDocument | HomepageDocument | LandingfooterDocument | LandingnavAlternativeDocument | LandingnavDocument | LandingpageDocument | MenutopDocument | PageDocument;
 
 /**
  * Primary content in *CardList → Default → Primary*
@@ -2001,55 +2171,14 @@ export interface LandingProjectCarouselSliceDefaultPrimary {
  */
 export interface LandingProjectCarouselSliceDefaultItem {
 	/**
-	 * Project Title field in *LandingProjectCarousel → Items*
+	 * Carousel field in *LandingProjectCarousel → Items*
 	 *
-	 * - **Field Type**: Title
-	 * - **Placeholder**: Project name
-	 * - **API ID Path**: landing_project_carousel.items[].projecttitle
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	projecttitle: prismic.TitleField;
-	
-	/**
-	 * Location field in *LandingProjectCarousel → Items*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: City, State
-	 * - **API ID Path**: landing_project_carousel.items[].location
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	location: prismic.RichTextField;
-	
-	/**
-	 * Project Description field in *LandingProjectCarousel → Items*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: Describe the project...
-	 * - **API ID Path**: landing_project_carousel.items[].projectdescription
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	projectdescription: prismic.RichTextField;
-	
-	/**
-	 * Auto Scroll field in *LandingProjectCarousel → Items*
-	 *
-	 * - **Field Type**: Boolean
+	 * - **Field Type**: Content Relationship
 	 * - **Placeholder**: *None*
-	 * - **Default Value**: true
-	 * - **API ID Path**: landing_project_carousel.items[].autoscroll
-	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 * - **API ID Path**: landing_project_carousel.items[].carousel
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	autoscroll: prismic.BooleanField;
-	
-	/**
-	 * Images field in *LandingProjectCarousel → Items*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: landing_project_carousel.items[].images
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	images: prismic.ImageField<never>;
+	carousel: prismic.ContentRelationshipField<"carousel">;
 }
 
 /**
@@ -3276,6 +3405,7 @@ declare module "@prismicio/client" {
 		export type {
 			CarouselDocument,
 			CarouselDocumentData,
+			CarouselDocumentDataImagesItem,
 			FootermenuDocument,
 			FootermenuDocumentData,
 			FootermenuDocumentDataLinkgroupItem,
@@ -3287,6 +3417,9 @@ declare module "@prismicio/client" {
 			LandingfooterDocumentData,
 			LandingfooterDocumentDataContactgroupItem,
 			LandingfooterDocumentDataNavlinksItem,
+			LandingnavAlternativeDocument,
+			LandingnavAlternativeDocumentData,
+			LandingnavAlternativeDocumentDataNavlinkItem,
 			LandingnavDocument,
 			LandingnavDocumentData,
 			LandingnavDocumentDataNavlinkItem,
