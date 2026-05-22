@@ -39,6 +39,7 @@ const LandingNav = ({ landingNav }) => {
       const navHeight = document.querySelector("nav")?.offsetHeight || 0;
       const y = el.getBoundingClientRect().top + window.scrollY - navHeight;
       window.scrollTo({ top: y, behavior: "smooth" });
+      window.history.pushState(null, "", id);
     }
     setIsMenuOpen(false);
   };
