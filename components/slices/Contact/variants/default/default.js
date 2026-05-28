@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useRef, useReducer } from "react";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
+import emailjs from "emailjs-com";
+
+const SERVICE = "service_7h6pubo";
+const TEMPLATE = "template_jrbpahr";
+emailjs.init("o7q5tfP-Ul-Og8tEU");
 
 import { SliceFactory } from "../../../../common/Containers";
 import { PageContainer, ButtonContainer, SectionContainer, FormContainer } from "../default/defaultStyles";
@@ -32,35 +37,35 @@ const Base = slice => {
       text: "Estamos enviando su solicitud.",
     });
 
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        origin: "Contact",
-        name: data.firstname,
-        email: data.email,
-        message: data.message,
-      }),
-    })
-      .then(async (res) => {
-        const result = await res.json().catch(() => ({}));
-        if (!res.ok || !result.ok) throw new Error(result?.message || "Error");
+    const templateParams = {
+      from_name: data.firstname,
+      to_email: data.email,
+      to_name: data.firstname,
+      message: data.message,
+      reply_to: data.email,
+    };
+
+    emailjs.send(SERVICE, TEMPLATE, templateParams).then(
+      function (response) {
         setIsSentEmail({
           sentEmail: true,
           isFailure: false,
           title: "Gracias 🎉",
           text: "Nos pondremos en contacto lo antes posible.",
+          response: response || "",
         });
-      })
-      .catch((error) => {
+      },
+      function (error) {
         console.log("FAILED...", error);
         setIsSentEmail({
           sentEmail: true,
           isFailure: true,
           title: "Página no encontrada 😭",
           text: "Parece que no podemos encontrar la página que estás buscando",
+          response: "",
         });
-      });
+      }
+    );
   }
   const emailValidation = (e, errors) => {
     const emailPattern =

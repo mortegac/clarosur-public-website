@@ -1,7 +1,7 @@
-const SERVICE_ID = process.env.EMAILJS_SERVICE_ID || "service_yy76iay";
-const TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID || "template_tjnet8s";
-const PUBLIC_KEY = process.env.EMAILJS_USER_ID || "kDFbozqH1THWp3UdO";
-const PRIVATE_KEY = process.env.EMAILJS_PRIVATE_KEY || "";
+const SERVICE_ID = "service_7h6pubo";
+const TEMPLATE_ID = "template_jrbpahr";
+const PUBLIC_KEY = "o7q5tfP-Ul-Og8tEU";
+const PRIVATE_KEY = "Dy50odngCozIgyBn_RCnq";
 
 const EMAILJS_ENDPOINT = "https://api.emailjs.com/api/v1.0/email/send";
 const MAX_FIELD_LENGTH = 2000;

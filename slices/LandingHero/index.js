@@ -2,6 +2,11 @@ import { useRouter } from "next/router";
 import { useEffect, useMemo, useState } from "react";
 import { PrismicRichText } from "@prismicio/react";
 import { useForm } from "react-hook-form";
+import emailjs, { init } from "emailjs-com";
+
+const SERVICE_ID = "service_7h6pubo";
+const TEMPLATE_ID = "template_jrbpahr";
+const PUBLIC_KEY = "o7q5tfP-Ul-Og8tEU";
 import {
   Section,
   Title,
@@ -24,6 +29,10 @@ const LandingHero = ({ slice }) => {
   const router = useRouter();
 
   const [currentLandingPage, setCurrentLandingPage] = useState("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") init(PUBLIC_KEY);
+  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -57,21 +66,28 @@ const LandingHero = ({ slice }) => {
 
     const { name, phone, email, message } = data;
 
+    const templateParams = {
+      from_name: name,
+      to_phone: phone,
+      to_email: email,
+      message: `
+        Nuevo contacto desde el formulario de landing.
+
+        📍 Página: ${currentLandingPage}
+
+        🧑 Nombre: ${name}
+        📧 Email: ${email}
+        📱 Teléfono: ${phone}
+        ${message ? `✉️ Mensaje: ${message}` : ""}
+      `,
+      service: "",
+      budget: "",
+      reply_to: email,
+      to_name: name,
+    };
+
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          origin: "LandingHero",
-          name,
-          email,
-          phone,
-          message,
-          currentLandingPage,
-        }),
-      });
-      const result = await res.json().catch(() => ({}));
-      if (!res.ok || !result.ok) throw new Error(result?.message || "Error");
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
       setStatus({
         sent: true,
         success: true,
@@ -79,7 +95,7 @@ const LandingHero = ({ slice }) => {
       });
       reset();
     } catch (error) {
-      console.error("Contact API Error:", error);
+      console.error("EmailJS Error:", error);
       setStatus({
         sent: true,
         success: false,
